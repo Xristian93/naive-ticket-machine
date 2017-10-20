@@ -46,7 +46,13 @@ public class TicketMachine
     {
         return balance;
     }
-
+    /**
+     * Devuelve el valor del campo total
+     */
+    public int getTotal()
+    {
+        return total;
+    }
     /**
      * Receive an amount of money from a customer.
      */
@@ -54,7 +60,23 @@ public class TicketMachine
     {
         balance = balance + amount;
     }
+    /**
+     * Imprime la siguiente linea:
+     */
+    public void prompt()
+    {
+        System.out.println("Please insert the correct amount of money");
+    }
+    
+    /**
+     * Imprime por pantalla el precio del billete:
+     */
+    public void showPrice()
+    {
+        System.out.println("The price of a ticket is " + price + " cents");
+    }
 
+     
     /**
      * Print a ticket.
      * Update the total collected and
