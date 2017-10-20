@@ -29,7 +29,9 @@ public class TicketMachine
         balance = 0;
         total = 0;
     }
-    
+    /**
+     * Segundo constructor que indica precio por parametro
+     */
     public TicketMachine(int cost)
     {
         price = cost;
@@ -45,6 +47,7 @@ public class TicketMachine
         return price;
     }
 
+    
     /**
      * Return the amount of money already inserted for the
      * next ticket.
@@ -104,4 +107,15 @@ public class TicketMachine
         // Clear the balance.
         balance = 0;
     }
+    
+    
+    /**
+     * Metodo que simula el proceso de extraer todo el dinero que haya acumulado la máquina.
+     * Se invoca siempre que no hay ninguna operación en curso (es decir, siempre que el balance de la máquina esté a 0).
+     */
+    public void vaciar()
+    {
+        total = 0;
+    }
+
 }
